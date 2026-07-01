@@ -16,7 +16,7 @@ AllowPortNetNames=0
 AllowSheetEntryNetNames=1
 AppendSheetNumberToLocalNets=0
 NetlistSinglePinNets=0
-DefaultConfiguration=Default Configuration
+DefaultConfiguration=
 UserID=0xFFFFFFFF
 DefaultPcbProtel=1
 DefaultPcbPcad=0
@@ -52,6 +52,18 @@ CrossRefFollowFromMainSettings=1
 [Preferences]
 PrefsVaultGUID=
 PrefsRevisionGUID=
+
+[ProjectReleaseNamings]
+ProjectMarco=PCB_local_github
+ProjectItemFolderPath=Projects\Github_ERC_IRS_1
+ProjectItemFolderGUID=81735F69-5B4C-4F4D-8C64-70D92B66A146
+ProjectItemHRID=PRJ-00186
+Sources=SRC-`ProjectName`-001
+Fabrication=FAB-`ProjectName`
+Assembly=ASM-`ProjectName`-`VariantName`
+
+[Release]
+ReleaseTarget=3
 
 [Document1]
 DocumentPath=Sheet1.SchDoc
@@ -236,48 +248,34 @@ Name=SCH_REV
 Value=A
 
 [Configuration1]
-Name=Default Configuration
-ParameterCount=0
-ConstraintFileCount=0
-ReleaseItemId=
-Variant=[No Variations]
-OutputJobsCount=0
-ContentTypeGUID=B953ABBB-897D-493B-96D2-85DABE1896C4
-ConfigurationType=Custom
-
-[Configuration2]
 Name=Sources
 ParameterCount=0
 ConstraintFileCount=0
-ReleaseItemId=
+ReleaseItemId=D26E1EAC-336B-4D5A-BE7B-00D9CA2CF25C
 Variant=[No Variations]
 OutputJobsCount=1
 DocumentReferenceClass1=DocumentReference
-OutputJobFileName1=
+OutputJobFileName1=Documentation.OutJob
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
 
-[Configuration3]
+[Configuration2]
 Name=Fabrication
 ParameterCount=0
 ConstraintFileCount=0
 ReleaseItemId=
 Variant=[No Variations]
-OutputJobsCount=1
-DocumentReferenceClass1=DocumentReference
-OutputJobFileName1=
+OutputJobsCount=0
 ContentTypeGUID=0C520D2A-E60C-11DF-B822-12313F0024A2
 ConfigurationType=Fabrication
 
-[Configuration4]
+[Configuration3]
 Name=Assembly
 ParameterCount=0
 ConstraintFileCount=0
 ReleaseItemId=
 Variant=[No Variations]
-OutputJobsCount=1
-DocumentReferenceClass1=DocumentReference
-OutputJobFileName1=
+OutputJobsCount=0
 ContentTypeGUID=0D12F8DC-E60C-11DF-B822-12313F0024A2
 ConfigurationType=Assembly
 
@@ -1262,6 +1260,23 @@ Type162=1
 Type163=1
 Type164=1
 Type165=2
+
+[Custom Electrical Rules Check]
+053cfcad-9028-436d-9794-218adddefb83="Cap Derating Check"|3
+129d819a-0204-4f26-8776-23e099815274="3 ESD check"|2
+195daf02-26df-4853-ab23-7713ef4a698f="1 Component check"|3
+1ccebf55-4a55-49a0-a45a-6a6617184d66="Default Name"|3
+23ae64ae-986d-4a00-8631-839a0ff4e34e="Resistor Power Check"|3
+2725c289-52a9-47e3-9e4d-e1332ebbc086=A1|1
+465f34d8-e05b-4fc5-8180-9baf756698e6="I2C Address Conflict"|2
+6189b488-d3ac-4e83-b748-cf3441bd8c15=_Test2|3
+627f06e9-0555-4d7a-8125-b078e56896ae=NetNamingConvention|1
+9132a9e1-5a05-4059-b5a5-a5b28c99f9fa=BJ01|1
+995bacb7-5ca0-4e9e-a239-9031598792f2="Param Check - Space"|1
+dbec176f-1526-4e98-a9be-90451e29c50d="| [ , ; "" : delimiters"|3
+f2d287a1-fb7a-45e3-a891-58c62b701992=_Test3|1
+f4ddaf34-1636-474c-877d-35b6ba8704b3="2 Component & Net check"|2
+fd507100-b11d-4198-bf43-d8fbe08d742d=NetNamingConvention|1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
